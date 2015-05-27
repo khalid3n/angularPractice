@@ -1,0 +1,55 @@
+   <button class="btn btn-primary" data-toggle="modal" ng-click="addContact();"> Add Contact </button>
+   <div modal="showModal" id="feedbackModal" tabindex="-1" role="dialog" aria-labelledby="feedback-modal" aria-hidden="true" class="modal fade">
+		<div class="modal-dialog">
+	        <div class="modal-content">
+	            <!-- Modal Header -->
+	            <div class="modal-header">
+	                <button type="button" ng-click="closeModal();" class="close" 
+	                   data-dismiss="modal">
+	                       <span aria-hidden="true">&times;</span>
+	                       <span class="sr-only">Close</span>
+	                </button>
+	                <h4 class="modal-title" id="myModalLabel">
+	                    Contact
+	                </h4>
+	            </div>
+	            <form role="form" ng-submit="submitForm();">
+	            <!-- Modal Body -->
+	            <div class="modal-body">
+	                
+	                  <div class="form-group">
+	                    <label for="firstName">First Name</label>
+	                      <input ng-model="contact.firstName" type="text" class="form-control"
+	                      id="firstName" placeholder="Enter First Name" required/>
+	                  </div>
+	                  <div class="form-group">
+	                    <label for="lastName">First Name</label>
+	                      <input ng-model="contact.lastName" type="text" class="form-control"
+	                      id="lastName" placeholder="Enter last Name" required/>
+	                  </div>
+	                  <div class="form-group">
+	                    <label for="email">Email</label>
+	                      <input ng-model="contact.email" type="email" class="form-control"
+	                          id="email" placeholder="Email" required/>
+	                  </div>
+	                  <div class="form-group">
+	                    <label for="mobile">Mobile</label>
+	                      <input ng-model="contact.contactNo" type="tel" class="form-control"
+	                          id="mobile" placeholder="Mobile"/>
+	                  </div>  
+	            </div>
+	            
+	            <!-- Modal Footer -->
+	            <div class="modal-footer">
+	                <button type="button" ng-click="closeModal();" class="btn btn-default"
+	                        data-dismiss="modal">
+	                            Close
+	                </button>
+	                <button type="submit" class="btn btn-primary" ng-show="showme">
+	                    Save Contact
+	                </button>
+	            </div>
+	            </form>
+	        </div>
+    	</div>
+	</div>  

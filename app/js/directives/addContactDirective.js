@@ -5,15 +5,13 @@
     .directive('addContact', function() {
       return {
         templateUrl: '/partials/addContact.html',
-        controllerAs : 'ctrl',
-        bindToController: true,
-        scope: {
-          url : "@"
-        },
+        
 
-        controller: ['$scope', '$http', function($scope, $http) {
-          var url  = this.url || "A";
+        controller: ['$attrs', '$scope', '$http', function($attrs, $scope, $http) {
+          var url  = $attrs.url || "A";
+          var number = $attrs.number;
           console.log(url);
+          console.log(number);
 
           $scope.addContact = function() {
             $scope.showModal = true;
